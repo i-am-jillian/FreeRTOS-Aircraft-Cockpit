@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "author": "CSE 321",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 200,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_wing",
+      "top": 80,
+      "left": 60,
+      "attrs": {
+        "color": "red",
+        "label": "WING"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_seatbelt",
+      "top": 80,
+      "left": 120,
+      "attrs": {
+        "color": "white",
+        "label": "SEAT BELT"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_gear_down",
+      "top": 80,
+      "left": 180,
+      "attrs": {
+        "color": "green",
+        "label": "GEAR DOWN"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_gear_changing",
+      "top": 80,
+      "left": 240,
+      "attrs": {
+        "color": "orange",
+        "label": "GEAR CHANGING"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_smoke",
+      "top": 80,
+      "left": 300,
+      "attrs": {
+        "color": "red",
+        "label": "SMOKE"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_seatbelt",
+      "top": 200,
+      "left": 400,
+      "attrs": {
+        "color": "white",
+        "label": "SEAT BELT"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_gear",
+      "top": 280,
+      "left": 400,
+      "attrs": {
+        "color": "green",
+        "label": "GEAR"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_smoke",
+      "top": 360,
+      "left": 400,
+      "attrs": {
+        "color": "red",
+        "label": "SMOKE"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "uno:5",
+      "led_wing:A",
+      "green",
+      []
+    ],
+    [
+      "led_wing:C",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:6",
+      "led_seatbelt:A",
+      "green",
+      []
+    ],
+    [
+      "led_seatbelt:C",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:7",
+      "led_gear_down:A",
+      "green",
+      []
+    ],
+    [
+      "led_gear_down:C",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:8",
+      "led_gear_changing:A",
+      "green",
+      []
+    ],
+    [
+      "led_gear_changing:C",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:9",
+      "led_smoke:A",
+      "green",
+      []
+    ],
+    [
+      "led_smoke:C",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "uno:2",
+      "btn_seatbelt:1.l",
+      "blue",
+      []
+    ],
+    [
+      "btn_seatbelt:2.l",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "uno:3",
+      "btn_gear:1.l",
+      "blue",
+      []
+    ],
+    [
+      "btn_gear:2.l",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "uno:4",
+      "btn_smoke:1.l",
+      "blue",
+      []
+    ],
+    [
+      "btn_smoke:2.l",
+      "uno:GND.2",
+      "black",
+      []
+    ]
+  ],
+  "serialMonitor": {
+    "display": "always"
+  },
+  "dependencies": {}
+}
