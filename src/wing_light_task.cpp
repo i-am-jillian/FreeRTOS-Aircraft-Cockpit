@@ -11,6 +11,6 @@ void WingLightTask(void *pvParameters) {
         vTaskDelay(pdMS_TO_TICKS(WING_LIGHT_BLINK_RATE));
 
         digitalWrite(WING_LIGHT_LED, LOW);
-        vTaskDelay(pdTICKS_TO_MS(WING_LIGHT_BLINK_RATE));
+        vTaskDelay(pdMS_TO_TICKS(WING_LIGHT_BLINK_RATE));
     }
 }
