@@ -39,3 +39,4 @@ void SmokeDetectionTask(void *pvParameters) {
 
     vTaskDelay(pdMS_TO_TICKS(SMOKE_POLL_PERIOD));
 }
+}
