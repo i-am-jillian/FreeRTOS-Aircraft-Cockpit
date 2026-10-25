@@ -6,5 +6,16 @@
 
 void SeatBeltTask(void *pvParameters) {
     /* TODO */
-    
+    bool last_pressed = false; /*released*/
+    bool currentPressed;
+
+    for(;;){
+        currentPressed = (digitalRead(SEATBELT_BUTTON) == LOW);
+        if (last_pressed == false && currentPressed == true){
+            seatBeltOn = !seatBeltOn;
+            digitalWrite(SEATBELT_BUTTON, seatBeltOn);
+        }
+        last_pressed = currentPressed;
+        vTaskDelay(pdMS_TO_TICKS(BUTTON_POLL_PERIOD));
+    };
 }
